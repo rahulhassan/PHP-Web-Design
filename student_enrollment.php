@@ -4,34 +4,13 @@
 			<title>
 				Report
 			</title>
-			<style>
-			body{
-				margin:10px;
-			}
-			.cell{
-				position: relative;
-				left:0;
-				right:0;
-				margin: auto;
-				width:1080px;
-			}
-			table,th,td {
-				border: 2px solid black;
-				border-collapse: collapse;
-			}
-			.content-table{
-				float:left;
-				margin:10px;
-			}
-			
-			</style>
+			<link rel="stylesheet" href="css/generateReport.css">
 			
 		</head>
 	<body>
 	
-	<h1 align="center">Monthly / Yearly Student Enrollment 2019</h1>
-	<div class="cell">
-		<table class="content-table">
+	<h1>Monthly / Yearly Student Enrollment 2019</h1>
+		<table class="center content-table">
 		<caption>CSE</caption>
 			<tr>
 				<th>&nbsp;Fall&nbsp;</th>
@@ -44,7 +23,7 @@
 				<td>1200</td>
 			</tr>
 		</table>
-		<table class="content-table">
+		<table class="center content-table">
 		<caption>EEE</caption>
 			<tr>
 				<th>&nbsp;Fall&nbsp;</th>
@@ -57,7 +36,7 @@
 				<td>700</td>
 			</tr>
 		</table>
-		<table class="content-table">
+		<table class="center content-table">
 		<caption>BBA</caption>
 			<tr>
 				<th>&nbsp;Fall&nbsp;</th>
@@ -70,7 +49,7 @@
 				<td>1200</td>
 			</tr>
 		</table>
-		<table class="content-table">
+		<table class="center content-table">
 		<caption>Total Students</caption>
 			<tr>
 				<th>&nbsp;Semester&nbsp;</th>
@@ -91,6 +70,5 @@
 				
 			</tr>
 		</table>
-	</div>
 	</body>
 </html>

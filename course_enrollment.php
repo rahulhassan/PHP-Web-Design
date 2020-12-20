@@ -4,67 +4,13 @@
 			<title>
 				Report
 			</title>
-			<style>
-			
-			.cell{
-				position: relative;
-				left:0;
-				right:0;
-				margin: auto;
-				width:1080px;
-			}
-			table,th,td {
-				border: 2px solid black;
-				border-radius: 6px;
-				border-collapse: collapse;
-			}
-			body{
-				
-				background-image:linear-gradient(45deg,#1F60A0,#68C9F7);
-				font-family:"Poppins", "Arial", "Helvetica Neue", sans-serif;
-				margin:10px;
-			}
-			
-			.content-table{
-				background-color: white;
-					position: relative;
-					left:0;
-					right:0;
-					margin: auto;
-					border-collapse: collapse;
-					margin:25px 0;
-					font-size:20px;
-					min-width:600px;
-					border-radius:10px 10px 0 0;
-					overflow: hidden;
-					box-shadow:0 0 20px rgba(0,0,0,0.15);
-				}
-				.content-table thead tr{
-					
-					background-color:#009879;
-					border-radius: 10px;
-					color: white;
-					text-align:left;
-				}
-				.content-table th,
-				.content-table td{
-					padding: 12px 15px;
-				}
-				.content-table tbody tr{
-					border-bottom: 1px solid #dddddd;
-				}
-				
-				.content-table tbody tr:last-of-type{
-					border-bottom: 2px solid #009878;
-				}
-			</style>
+			<link rel="stylesheet" href="css/generateReport.css">
 			
 		</head>
 	<body>
 	
-	<h1 align="center">Monthly / Yearly Course Enrollment</h1>
-	<div class="cell">
-		<table class="content-table">
+	<h1>Monthly / Yearly Course Enrollment</h1>
+		<table class="center content-table">
 			<tr>
 				<th>Subject</th>
 				<th>&nbsp;Section&nbsp;</th>
@@ -136,7 +82,7 @@
 			</tr>
 		</table>
 		
-		<table class="content-table">
+		<table class="center content-table">
 			<tr>
 				<th>Subject</th>
 				<th>&nbsp;Section&nbsp;</th>
@@ -207,7 +153,7 @@
 				<td>36</td>
 			</tr>
 		</table>
-		<table class="content-table">
+		<table class="center content-table">
 			<tr>
 				<th>Subject</th>
 				<th>&nbsp;Section&nbsp;</th>
@@ -278,6 +224,5 @@
 				<td>36</td>
 			</tr>
 		</table>
-		</div>
 	</body>
 </html>

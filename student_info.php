@@ -1,22 +1,25 @@
 <?php
-if(isset($_GET['action'])) {
-	$users = simplexml_load_file('data/student_data.xml');
-	$id = $_GET['id'];
-	$index = 0;
-	$i = 0;
-	foreach($users->user as $user){
-		if($user['id']==$id){
-			$index = $i;
-			break;
-		}
-		$i++;
-	}
-	unset($users->user[$index]);
-	file_put_contents('data/student_data.xml', $users->asXML());
-	}
-	$users = simplexml_load_file('data/student_data.xml');
-	$snum= 'Number of Students: '.count($users);
-	$sinfo='Student Information';
+ require_once 'phpvalidation/validation_student_info.php';
+ $students = getStudentInfo();
+
+			// if(isset($_GET['action'])) {
+			// 	$users = simplexml_load_file('data/student_data.xml');
+			// 	$id = $_GET['id'];
+			// 	$index = 0;
+			// 	$i = 0;
+			// 	foreach($users->user as $user){
+			// 		if($user['id']==$id){
+			// 			$index = $i;
+			// 			break;
+			// 		}
+			// 		$i++;
+			// 	}
+			// 	unset($users->user[$index]);
+			// 	file_put_contents('data/student_data.xml', $users->asXML());
+			// 	}
+			// 	$users = simplexml_load_file('data/student_data.xml');
+			// 	$snum= 'Number of Students: '.count($users);
+			$sinfo="Students Information";
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -24,66 +27,12 @@ if(isset($_GET['action'])) {
 			<title>
 				Student Information
 			</title>
-			<style>
-				
-				.content-table{
-					border-collapse: collapse;
-					margin:25px 0;
-					font-size:25px;
-					min-width:600px;
-					border-radius:10px 10px 0 0;
-					overflow: hidden;
-					box-shadow:0 0 20px rgba(0,0,0,0.15);
-				}
-				.content-table thead tr{
-					
-					background-color:#009879;
-					border-radius: 10px;
-					color: white;
-					text-align:left;
-				}
-				.content-table th,
-				.content-table td{
-					padding: 12px 15px;
-				}
-				.content-table tbody tr{
-					border-bottom: 1px solid #dddddd;
-				}
-				.content-table tbody tr:nth-of-type(even){
-					background-color:#f3f3f3;
-				}
-				.content-table tbody tr:last-of-type{
-					border-bottom: 2px solid #009878;
-				}
-				table tr a button{
-					background-color: red;
-					cursor: pointer;
-					padding: 15px;
-					border-radius: 6px;
-					border: none;
-					color: white;
-					font-weight:bold
-					
-				}
-				.edit{
-					background-color: green;
-					cursor: pointer;
-					padding: 15px;
-					border: none;
-					color: white;
-					font-weight:bold;
-					border-radius: 6px;
-					
-				}
-				
-			</style>
-			
+			<link rel="stylesheet" href="css/stfcinfo.css">
 		</head>
 	<body>
-	<div class="cell">
 	<h1><?php echo $sinfo ?></h1>
-	<h2><?php echo $snum ?></h2>
-		<table class="content-table>
+	<h2><?php// echo $snum ?></h2>
+		<table class="center content-table">
 			<thead>
 				<tr>
 					<th>Id</th>
@@ -98,17 +47,20 @@ if(isset($_GET['action'])) {
 			
 			
 			<tbody>
-			<?php foreach($users->user as $user) { ?>
+			<?php
+				foreach($students as $s){
+            ?>
 			<tr>
 				
-				<td><?php echo $user['id']; ?></td>
-				<td><?php echo $user->firstname; ?></td>
-				<td><?php echo $user->dateOfbirth; ?></td>
-				<td><?php echo $user->gender; ?></td>
-				<td><?php echo $user->phone; ?></td>
-				<td><?php echo $user->email; ?></td>
+				<td><?php echo $s['id']; ?></td>
+				<td><?php echo $s['first_name']; ?></td>
+				<td><?php echo $s['dob']; ?></td>
+				<td><?php echo $s['gender']; ?></td>
+				<td><?php echo $s['phone']; ?></td>
+				<td><?php echo $s['email']; ?></td>
+				
 				<td><button class="edit">Edit</button>
-				<a href="student_info.php?action=delete&id=<?php echo $user['id']; ?>" onclick="return confirm('Do you want to delete?')"><button>Delete</button></a>
+				<a href="#" onclick="return confirm('Do you want to delete?')"><button>Delete</button></a>
 				</td>
 				
 			</tr>
@@ -116,6 +68,5 @@ if(isset($_GET['action'])) {
 			<tbody>
 			
 		</table>
-	</div>
 	</body>
 </html>

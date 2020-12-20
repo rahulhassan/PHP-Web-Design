@@ -1,5 +1,6 @@
 <?php
-	$fname = $lname = $id = $dob = $gender = $phone = $email = $pass = "";
+	require_once 'models/db_connect.php';
+	$fname = $lname = $id = $dob = $gender = $phone = $email = $pass = $msg = "";
 	$err_fname = $err_id = $err_dob = $err_gender = $err_phone = $err_pass = "";
 	
 	$hasError=false;
@@ -64,31 +65,20 @@
 		}
 		
 		if(!$hasError){
-			$users = simplexml_load_file("data/faculty_data.xml");
-			
-			$user = $users->addChild("user");
-			$user->addAttribute("id", $id);
-			$user->addChild("firstname",$fname);
-			$user->addChild("lastname",$lname);
-			$user->addChild("dateOfbirth",$dob);
-			$user->addChild("gender",$gender);
-			$user->addChild("phone",$phone);
-			$user->addChild("email",$email);
-			$user->addChild("pass",$pass);
-			
-			echo "<pre>";
-			print_r($users);
-			echo "</pre>";
-			
-			$xml = new DOMDocument("1.0");
-			$xml->preserveWhiteSpace=false;
-			$xml->formatOutput= true;
-			$xml->loadXML($users->asXML());
-			
-			
-			$file = fopen("data/faculty_data.xml","w");
-			fwrite($file,$xml->saveXML());
+			$msg = "Data Inserted Successfully";
+			$password=md5($pass);
+			addfaculty($fname, $lname,$id, $dob, $gender, $phone, $email, $password);
 		}
 	}
 	
+	function addfaculty($fname, $lname,$id, $dob, $gender, $phone, $email, $password){
+
+		$query = "INSERT INTO faculty VALUES ('$fname', '$lname','$id', '$dob', '$gender', $phone, '$email', '$password')";
+		execute($query);
+	}
+	function getFacultyInfo(){
+		$query ="SELECT * FROM faculty";
+		$result = get($query);
+		return $result;
+	}
 ?>

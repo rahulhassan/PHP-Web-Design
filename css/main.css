@@ -1,0 +1,44 @@
+.navhead{
+    text-align: center;
+}
+.navitem{
+    text-decoration: none;
+    color:#fff;
+    font-size:18px;
+}
+.btn1{
+    text-decoration: none;
+    
+    color:black;
+    font-size:18px;
+    
+}
+.wrapper{
+    width:860px;
+    margin: auto;
+}
+.wrapper ul{
+    list-style: none; 
+    
+}
+.wrapper ul li{
+    background: #262626;
+    width: 130px;
+    border: 1px solid #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    position:relative;
+    
+}
+.wrapper ul ul{
+    display: none;
+}
+.wrapper ul li:hover {
+    background: crimson;
+}
+
+.wrapper ul li:hover > ul {
+    display: block;
+}

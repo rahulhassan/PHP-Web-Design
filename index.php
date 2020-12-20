@@ -2,61 +2,18 @@
 <html lang ="en">
 	<head>
 		<meta name="viewport" content ="width =device-width,intial-scale=1.0">
-		<title=University Management Template</title>
-		<style>
-			.navitem{
-				text-decoration: none;
-				color:#fff;
-				font-size:18px;
-			}
-			.btn1{
-				text-decoration: none;
-				
-				color:black;
-				font-size:18px;
-				
-			}
-			.wrapper{
-				width:860px;
-				margin: auto;
-			}
-			.wrapper ul{
-				list-style: none; 
-				
-			}
-			.wrapper ul li{
-				background: #262626;
-				width: 130px;
-				border: 1px solid #fff;
-				height: 50px;
-				line-height: 50px;
-				text-align: center;
-				float: left;
-				position:relative;
-				
-			}
-			.wrapper ul ul{
-				display: none;
-			}
-			.wrapper ul li:hover {
-				background: crimson;
-			}
-			
-			.wrapper ul li:hover > ul {
-				display: block;
-			}
-			
-		</style>
+		<title>University Management Template</title>
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
       <div class="wr apper">
         <!--NAVIGATION-->
         <nav>
-            <center>
+			<div class="navhead">
                <img src="img/logo.png" width ="6%" alt="login" >
                <h4>"Eastern Prime University"</h4>
-               <h6>-Bringing Ambition of life</h6>
-            </center>
+			   <h6>-Bringing Ambition of life</h6>
+			</div>
 			<div class="wrapper">
 				<ul>
 					<li>
