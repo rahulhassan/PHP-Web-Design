@@ -3,8 +3,10 @@
 }
 .navitem{
     text-decoration: none;
+    padding: 14px;
     color:#fff;
     font-size:18px;
+    
 }
 .btn1{
     text-decoration: none;
