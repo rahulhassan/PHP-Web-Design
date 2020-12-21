@@ -1,5 +1,7 @@
 <?php
-	$uniname = $since = $location = "";
+
+	require_once 'models/db_connect.php';
+	$uniname = $since = $location = $msg = "";
 	$err_uniname = $err_since = $err_location = "";
 	
 	$hasError=false;
@@ -27,7 +29,20 @@
 		else{
 			$location =($_POST["location"]);
 		}
-		
+		if(!$hasError){
+			$msg = "Data Inserted Successfully";
+			addUniversity($uniname, $since, $location);
+		}
 	}
 	
+	function addUniversity($uniname, $since, $location){
+
+		$query = "INSERT INTO university VALUES (null,'$uniname', $since, '$location')";
+		execute($query);
+	}
+	function getUniversityInfo(){
+		$query ="SELECT * FROM university";
+		$result = get($query);
+		return $result;
+	}
 ?>

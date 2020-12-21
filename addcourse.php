@@ -9,6 +9,7 @@
 		<div class="main">
 			
 			<h2 style="text-align:center; color:#525252">Add Course</h2>
+			<p  style="color:green; text-align:center;"><?php echo $msg;?></p>
 			
 			You must have to fill (<span style="color:red">*</span>) fields.<br><br>
 			<form action="" method="post">

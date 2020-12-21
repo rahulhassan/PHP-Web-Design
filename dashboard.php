@@ -40,17 +40,17 @@
 				<li><a href="#">UNIVERSITY</a>
 					<ul> 
 						<li><a href="adduniversity.php">Add University</a></li>
-						<li><a href="#">Update</a></li>
-						<li><a href="#">Delete</a></li>
-						<li><a href="#">View</a></li>		
+						<li><a href="university_info.php">Update</a></li>
+						<li><a href="university_info.php">Delete</a></li>
+						<li><a href="university_info.php">View</a></li>		
 					</ul>
 				</li>
 				<li><a href="#">COURSE</a>
 					<ul> 
 						<li><a href="addcourse.php">Add Course</a></li>
-						<li><a href="#">Update</a></li>
-						<li><a href="#">Delete</a></li>
-						<li><a href="#">View</a></li>		
+						<li><a href="course_info.php">Update</a></li>
+						<li><a href="course_info.php">Delete</a></li>
+						<li><a href="course_info.php">View</a></li>		
 					</ul>
 				</li>
 				<li><a href="#">GENERATE REPORT</a>

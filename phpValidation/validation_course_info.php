@@ -1,5 +1,6 @@
 <?php
-	$subname = $secname = $day = $time= "";
+	require_once 'models/db_connect.php';
+	$subname = $secname = $day = $time= $msg = "";
 	$err_subname = $err_secname = $err_day = $err_time= "";
 	
 	$hasError=false;
@@ -34,7 +35,20 @@
 		else{
 			$time =($_POST["time"]);
 		}
-		
+		if(!$hasError){
+			$msg = "Data Inserted Successfully";
+			addCourse($subname, $secname, $day, $time);
+		}
 	}
 	
+	function addCourse($subname, $secname, $day, $time){
+
+		$query = "INSERT INTO course VALUES (null,'$subname','$secname', '$day', '$time')";
+		execute($query);
+	}
+	function getCourseInfo(){
+		$query ="SELECT * FROM course";
+		$result = get($query);
+		return $result;
+	}
 ?>
