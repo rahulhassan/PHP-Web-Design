@@ -13,6 +13,9 @@ body{
     font-size:18px;
     
 }
+.navhead img{
+    width: 100px;
+}
 .btn1{
     text-decoration: none;
     
