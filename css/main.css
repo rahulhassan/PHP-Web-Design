@@ -1,3 +1,8 @@
+body{
+    width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .navhead{
     text-align: center;
 }
