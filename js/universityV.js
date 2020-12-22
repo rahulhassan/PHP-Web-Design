@@ -15,7 +15,7 @@ function validate(){
     
     if(e_uniname.value == ""){
         hasError= true;
-        err_uniname.innerHTML = "* please provide a name";
+        err_uniname.innerHTML = "* required name";
         e_uniname.style.border="1px solid red";
     }
     if(e_since.value == ""){
@@ -44,7 +44,7 @@ function refresh(){
     err_location.innerHTML="";
     var e_location = getElement("location");
 
-    e_uniname.style.border="1px solid green";
-    e_since.style.border="1px solid green";
-    e_location.style.border="1px solid green";
+    e_uniname.style.border="2px solid green";
+    e_since.style.border="2px solid green";
+    e_location.style.border="2px solid green";
 }

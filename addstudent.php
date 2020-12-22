@@ -1,8 +1,8 @@
 <?php include_once "phpValidation/validation_student_info.php" ;?>
-<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Add Student</title>
+		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/addstudent.css">
 	</head>
 	<body>
@@ -10,7 +10,7 @@
 			<h2 style="text-align:center; color:#525252">Add Student</h2>
 			<p  style="color:green; text-align:center;"><?php echo $msg;?></p>
 			You must have to fill (<span style="color:red">*</span>) fields.<br><br>
-			<form action="" method="post" onsubmit="return validate()">
+			<form action="" name="forms" method="post" onsubmit="return validate()">
 				<div>
 				<label>Name</label>
 				<input class="nwd lname align" type="text" name="lname" placeholder="Last Name">
@@ -19,8 +19,9 @@
 				<br><br>
 				
 				<label>ID</label>
-				<input class="ibox align" type="text" id="id" name="id">
+				<input class="ibox align" onfocusout="checkStudent(this)" type="text" id="id" name="id">
 				<span style="color:red;" id="err_id">*<?php echo $err_id;?></span>
+
 				<br><br>
 				
 				<label>Date Of Birth</label>
@@ -34,7 +35,7 @@
 				<input type="radio" value="Female"  name="gender"> Female
 				<input type="radio" value="Other"  name="gender"> Other
 				</span>
-				<span style="color:red;">*<?php echo $err_gender;?></span>
+				<span style="color:red;" id="err_gender">*<?php echo $err_gender;?></span>
 				<br><br>
 				
 				<label>Phone</label>
@@ -55,6 +56,6 @@
 				<input class="btn" type="submit" name="signup" value="Submit">
 			</form>
 		</div>
-		<script src="js/studentV.js"></script>
+		<script src="js/studentFacultyV.js"></script>
 	</body>
 </html>

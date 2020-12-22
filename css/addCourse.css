@@ -18,6 +18,10 @@ body{
     color: #555;
     
 }
+#err_sname,#err_section, #err_day, #err_time{
+    font-family: 'Teko', sans-serif;
+}
+
 .ibox{
     line-height: 40px;
     border-radius:5px;

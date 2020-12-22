@@ -21,7 +21,7 @@
 		<div class="navigation">
 			<ul>
 			
-				<li><a href="#">STUDENT</a>
+				<li class="std"><a href="#">STUDENT</a>
 					<ul> 
 						<li><a href="addstudent.php">Add Student</a></li>
 						<li><a href="student_info.php">Update</a></li>
@@ -53,7 +53,7 @@
 						<li><a href="course_info.php">View</a></li>		
 					</ul>
 				</li>
-				<li><a href="#">GENERATE REPORT</a>
+				<li class="gr"><a href="#">GENERATE REPORT</a>
 					<ul> 
 						<li><a href="student_enrollment.php">Student Enrollment</a></li>
 						<li><a href="course_enrollment.php">Course Enrollment</a></li>	

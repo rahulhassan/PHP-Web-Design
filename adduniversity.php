@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<title>Add University</title>
+		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/adduni.css">
 	</head>
 	<body>
@@ -32,6 +33,6 @@
 				<input class="btn" type="submit" name="signup" value="Submit">
 			</form>
 		</div>
-		<script src="js/addUniversity_validation.js"></script>
+		<script src="js/universityV.js"></script>
 	</body>
 </html>

@@ -27,6 +27,10 @@ body{
 .align{
     float:right;
 }
+#err_uniname, #err_since, #err_location{
+    font-family: 'Teko', sans-serif;
+}
+
 .back{
     text-decoration: none;
     background: #4272d7;

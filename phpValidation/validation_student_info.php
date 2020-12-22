@@ -82,5 +82,11 @@
 		$result = get($query);
 		return $result;
 	}
+	function getId($id){
+		$query = "SELECT id FROM student WHERE id='$id'";
+		$result = get($query);
+		if(count ($result)>0) return true;
+		return false;
+	}
 	
 ?>

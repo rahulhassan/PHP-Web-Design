@@ -27,6 +27,9 @@ body{
 .align{
     float:right;
 }
+#err_fname,#err_id, #err_dob, #err_phone, #err_pass{
+    font-family: 'Teko', sans-serif;
+}
 .nwd{
     width: 147px;
     line-height: 40px;
