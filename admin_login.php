@@ -13,8 +13,8 @@
 			$err_username="*Username required";
 			$hasError = true;
 		}
-		elseif(strlen($_POST["username"]) < 6){
-			$err_username="*Username must be 6 characters long";
+		elseif(strlen($_POST["username"]) < 5){
+			$err_username="*Username must be 5 characters long";
 			$hasError = true;
 		}
 		else{
@@ -24,8 +24,8 @@
 			$err_password="*Password required";
 			$hasError = true;
 		}
-		elseif(strlen($_POST["password"]) < 6){
-			$err_password="*Password must be 6 characters long";
+		elseif(strlen($_POST["password"]) < 5){
+			$err_password="*Password must be 5 characters long";
 			$hasError = true;
 		}
 		else{
@@ -33,14 +33,10 @@
 		}
 		
 		if(!$hasError){
-			$xml=simplexml_load_file("data/admin.xml");
-			$users = $xml->user;
 			$flag=false;
-			foreach($users as $user){
-				if($user->uname == $username && $user->pass== $password){
-					$flag = true;
-					setcookie("username",$username,time() + 10000);
-				}
+			if("admin" == $username && "admin"== $password){
+				$flag = true;
+				setcookie("username",$username,time() + 10000);
 			}
 			if($flag){
 				header("Location: dashboard.php");
