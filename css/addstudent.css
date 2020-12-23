@@ -27,7 +27,7 @@ body{
 .align{
     float:right;
 }
-#err_fname,#err_id, #err_dob, #err_phone, #err_pass{
+#err_fname,#err_id, #err_dob, #err_phone, #err_pass, #err_gender{
     font-family: 'Teko', sans-serif;
 }
 .nwd{

@@ -19,7 +19,7 @@
 				<br><br>
 				
 				<label>ID</label>
-				<input class="ibox align" onfocusout="checkFaculty(this)" type="text" id="id" name="id">
+				<input class="ibox align" onfocusout="checkFaculty(this)" type="text" id="id" placeholder="example: 2102020" name="id">
 				<span style="color:red;" id="err_id">*<?php echo $err_id;?></span>
 				<br><br>
 				

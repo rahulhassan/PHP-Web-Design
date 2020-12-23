@@ -1,8 +1,6 @@
 <?php
 	require_once 'phpvalidation/validation_faculty_info.php';
 	$faculty = getFacultyInfo();
-   
-
 			// if(isset($_GET['action'])) {
 			// 	$users = simplexml_load_file('data/faculty_data.xml');
 			// 	$id = $_GET['id'];
@@ -20,22 +18,21 @@
 			// 	}
 			// 	$users = simplexml_load_file('data/faculty_data.xml');
 			// 	$fnum= 'Number of Faculty: '.count($users);
-			$finfo= 'Faculty Information';
+	$finfo= 'Faculty Information';
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
 		<head>
 			<title>
-				Student Information
+				Faculty Information
 			</title>
 			<link rel="stylesheet" href="css/stfcinfo.css">
-			
 		</head>
 	<body>
 	<div class="cell">
 	<h1><?php echo $finfo ?></h1>
-	<h2><?php// echo $fnum ?></h2>
-		<table class="center content-table">
+	<input type="text" onkeyup="liveSearch(this)" placeholder="Write faculty name..." id="ssearchBox">
+		<table class="center content-table" id="myTable">
 			<thead>
 				<tr>
 					<th>Id</th>
@@ -48,26 +45,26 @@
 				</tr>
 			</thead>
 			
-			
 			<tbody>
 			<?php foreach($faculty as $f) { ?>
 			<tr>
-			<td><?php echo $f['id']; ?></td>
-				<td><?php echo $f['first_name']; ?></td>
+				<td><?php echo $f['id']; ?></td>
+				<td><?php echo $f['first_name']." ".$f['last_name']; ?></td>
 				<td><?php echo $f['dob']; ?></td>
 				<td><?php echo $f['gender']; ?></td>
 				<td><?php echo $f['phone']; ?></td>
 				<td><?php echo $f['email']; ?></td>
 				
-				<td><button class="edit">Edit</button>
+				<td>
+				<a href="#"><button class="edit">Edit</button></a>
 				<a href="#" onclick="return confirm('Do you want to delete?')"><button>Delete</button></a>
 				</td>
 			</tr>
 			<?php } ?>
-			<tbody>
-			
-			
+			<tbody>			
 		</table>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/search_operation.js"></script>
 	</body>
 </html>
