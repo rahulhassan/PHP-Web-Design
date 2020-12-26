@@ -1,30 +1,19 @@
 <?php 
-	require_once 'models/db_connect.php';
-	include_once "phpValidation/validation_student_info.php";
+	require_once '../models/db_connect.php';
+	include_once "../phpValidation/validation_faculty_info.php";
 ;?>
 <html>
 	<head>
-		<title>Update Student</title>
+		<title>Update Faculty</title>
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/addstudent.css">
+		<link rel="stylesheet" href="../css/addstudent.css">
 	</head>
 	<body>
 		<div class="main">	
-			<h2 style="text-align:center; color:#525252">Update Student Information</h2>
+			<h2 style="text-align:center; color:#525252">Update Faculty Information</h2>
 			You must have to fill (<span style="color:red">*</span>) fields.<br><br>
 			<form action="" name="forms" method="post" onsubmit="return validate()">
 				<div>
-					<?php
-						// $id = $_POST['id'];
-						// $query = "SELECT * FROM student WHERE id=$id";
-						// get($query);
-
-						// if(mysqli_num_rows($result)>0){
-						// 	while ($row = mysqli_fetch_array($result)){
-
-								?>
-						
-					
 					<label>Name</label>
 					<input class="nwd lname align" type="text" name="lname" placeholder="Last Name">
 					<input class="nwd fname align" id="fname" type="text" value="" name="fname" placeholder="First Name"></td>
@@ -52,16 +41,12 @@
 					
 					<label>Email</label>
 					<input class="ibox align" type="email" id="email" value="" name="email">
-					<?php
-						// 	}
-						// }
-					
-					?>
+			
 				</div><br><br>
-				<a class="back" href="student_info.php">Back</a>
+				<a class="back" href="../info/faculty_info.php">Back</a>
 				<input class="btn" type="submit" name="update" value="Update">
 			</form>
 		</div>
-		<script src="js/studentFacultyV.js"></script>
+		<script src="../js/studentFacultyV.js"></script>
 	</body>
 </html>

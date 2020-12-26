@@ -1,9 +1,9 @@
-<?php include_once "phpValidation/validation_faculty_info.php" ;?>
+<?php include_once "../phpValidation/validation_faculty_info.php" ;?>
 <html>
 	<head>
 		<title>Add Faculty</title>
 		<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/addstudent.css">
+		<link rel="stylesheet" href="../css/addstudent.css">
 	</head>
 	<body>
 		<div class="main">	
@@ -51,10 +51,10 @@
 				<span style="color:red;" id="err_pass">*<?php echo $err_pass;?></span>
 				
 				</div><br><br>
-				<a class="back" href="dashboard.php">Back</a>
+				<a class="back" href="../dashboard.php">Back</a>
 				<input class="btn" type="submit" name="signup" value="Submit">
 			</form>
 		</div>
-		<script src="js/studentFacultyV.js"></script>
+		<script src="../js/studentFacultyV.js"></script>
 	</body>
 </html>

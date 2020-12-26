@@ -4,7 +4,7 @@
 			<title>
 				Report
 			</title>
-			<link rel="stylesheet" href="css/generateReport.css">
+			<link rel="stylesheet" href="../css/generateReport.css">
 			
 		</head>
 	<body>

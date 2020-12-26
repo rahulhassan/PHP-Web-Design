@@ -1,5 +1,5 @@
 <?php
-    include 'phpValidation/validation_student_info.php';
+    include '../phpValidation/validation_faculty_info.php';
     $id = $_GET["u"];
     $uid = getId($id);
     if($uid){

@@ -1,6 +1,6 @@
 <?php
 	
-	require_once 'models/db_connect.php';
+	require_once '../models/db_connect.php';
 	$fname = $lname = $id = $dob = $gender = $phone = $email = $pass = $msg = "";
 	$err_fname = $err_id = $err_dob = $err_gender = $err_phone = $err_pass = "";
 	
@@ -72,7 +72,7 @@
 		}
 	}
 	if(isset($_POST['update'])){
-
+		$id= $_GET['id'];
 		if(empty ($_POST["fname"])){
 			$err_fname="First Name Required";
 			$hasError = true;
@@ -108,14 +108,14 @@
 		
 		$email = htmlspecialchars($_POST["email"]);
 		if(!$hasError){
-			$query = "UPDATE student SET first_name='$fname',last_name='$lname',dob='$dob', gender='$gender', phone =$phone,email='$email' WHERE id = $id";
+			$query = "UPDATE student SET first_name='$fname',last_name='$lname',dob='$dob', gender='$gender', phone ='$phone',email='$email' WHERE id = $id";
 			execute($query);
-			header("location: student_info.php");
+			header("location: ../info/student_info.php");
 		}
 	}
 	function addStudent($fname, $lname,$id, $dob, $gender, $phone, $email, $password){
 
-		$query = "INSERT INTO student VALUES ('$fname', '$lname','$id', '$dob', '$gender', $phone, '$email', '$password')";
+		$query = "INSERT INTO student VALUES ('$fname', '$lname','$id', '$dob', '$gender', '$phone', '$email', '$password')";
 		execute($query);
 	}
 	function getStudentInfo(){
@@ -129,5 +129,4 @@
 		if(count ($result)>0) return true;
 		return false;
 	}
-	
 ?>

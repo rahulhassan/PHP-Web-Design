@@ -23,18 +23,18 @@
 			
 				<li class="std"><a href="#">STUDENT</a>
 					<ul> 
-						<li><a href="addstudent.php">Add Student</a></li>
-						<li><a href="student_info.php">Update</a></li>
-						<li><a href="student_info.php">Delete</a></li>
-						<li><a href="student_info.php">View</a></li>		
+						<li><a href="insertData/addstudent.php">Add Student</a></li>
+						<li><a href="info/student_info.php">Update</a></li>
+						<li><a href="info/student_info.php">Delete</a></li>
+						<li><a href="info/student_info.php">View</a></li>		
 					</ul>
 				</li>
 				<li><a href="#">FACULTY</a>
 					<ul> 
-						<li><a href="addfaculty.php">Add Faculty</a></li>
-						<li><a href="faculty_info.php">Update</a></li>
-						<li><a href="faculty_info.php">Delete</a></li>
-						<li><a href="faculty_info.php">View</a></li>		
+						<li><a href="insertData/addfaculty.php">Add Faculty</a></li>
+						<li><a href="info/faculty_info.php">Update</a></li>
+						<li><a href="info/faculty_info.php">Delete</a></li>
+						<li><a href="info/faculty_info.php">View</a></li>		
 					</ul>
 				</li>
 				<li><a href="#">UNIVERSITY</a>
@@ -55,8 +55,8 @@
 				</li>
 				<li class="gr"><a href="#">GENERATE REPORT</a>
 					<ul> 
-						<li><a href="student_enrollment.php">Student Enrollment</a></li>
-						<li><a href="course_enrollment.php">Course Enrollment</a></li>	
+						<li><a href="generateReport/student_enrollment.php">Student Enrollment</a></li>
+						<li><a href="generateReport/course_enrollment.php">Course Enrollment</a></li>	
 					</ul>
 				</li>
 			</ul>

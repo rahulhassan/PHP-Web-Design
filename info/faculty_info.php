@@ -1,5 +1,5 @@
 <?php
-	require_once 'phpvalidation/validation_faculty_info.php';
+	require_once '../phpvalidation/validation_faculty_info.php';
 	$faculty = getFacultyInfo();
 			// if(isset($_GET['action'])) {
 			// 	$users = simplexml_load_file('data/faculty_data.xml');
@@ -26,9 +26,10 @@
 			<title>
 				Faculty Information
 			</title>
-			<link rel="stylesheet" href="css/stfcinfo.css">
+			<link rel="stylesheet" href="../css/stfcinfo.css">
 		</head>
 	<body>
+	<a href="../dashboard.php"><button class="home">HOME</button></a>
 	<div class="cell">
 	<h1><?php echo $finfo ?></h1>
 	<input type="text" onkeyup="liveSearch(this)" placeholder="Write faculty name..." id="ssearchBox">
@@ -56,8 +57,8 @@
 				<td><?php echo $f['email']; ?></td>
 				
 				<td>
-				<a href="#"><button class="edit">Edit</button></a>
-				<a href="#" onclick="return confirm('Do you want to delete?')"><button>Delete</button></a>
+					<a href="../update/facultyUpdate.php?id=<?php echo $f['id'];?>"><button class="edit">Edit</button></a>
+					<a href="../delete/facultyDelete.php?id=<?php echo $f['id'];?>" onclick="return confirm('Do you want to delete?')"><button>Delete</button></a>
 				</td>
 			</tr>
 			<?php } ?>
@@ -65,6 +66,6 @@
 		</table>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="js/search_operation.js"></script>
+    <script src="../js/search_operation.js"></script>
 	</body>
 </html>
