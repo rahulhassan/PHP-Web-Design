@@ -16,7 +16,7 @@
 				<div>
 					<label>Name</label>
 					<input class="nwd lname align" type="text" value="" name="lname" placeholder="Last Name">
-					<input class="nwd fname align" id="fname" type="text" value="<?php echo $info['first_name']?>" name="fname" placeholder="First Name"></td>
+					<input class="nwd fname align" id="fname" type="text" value="" name="fname" placeholder="First Name"></td>
 					<span style="color:red;"  id="err_fname">*<?php echo $err_fname;?></span>
 					<br><br>
 				
