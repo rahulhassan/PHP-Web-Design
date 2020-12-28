@@ -1,7 +1,7 @@
 <?php 
 	require_once '../models/db_connect.php';
-	include_once "../phpValidation/validation_faculty_info.php";
-;?>
+	include_once '../phpValidation/validation_faculty_info.php';	
+?>
 <html>
 	<head>
 		<title>Update Faculty</title>
