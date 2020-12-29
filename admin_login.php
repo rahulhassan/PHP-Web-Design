@@ -1,3 +1,4 @@
+
 <?php
 
 	$username="";
@@ -24,19 +25,19 @@
 			$err_password="*Password required";
 			$hasError = true;
 		}
-		elseif(strlen($_POST["password"]) < 5){
-			$err_password="*Password must be 5 characters long";
-			$hasError = true;
-		}
 		else{
 			$password=$_POST["password"];
 		}
 		
 		if(!$hasError){
+			$xml=simplexml_load_file("data/admin.xml");
+			$users = $xml->user;
 			$flag=false;
-			if("admin" == $username && "admin"== $password){
-				$flag = true;
-				setcookie("username",$username,time() + 10000);
+			foreach($users as $user){
+				if($user->uname == $username && $user->pass== $password){
+					$flag = true;
+					setcookie("username",$username,time() + 10000);
+				}
 			}
 			if($flag){
 				header("Location: dashboard.php");

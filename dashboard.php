@@ -1,4 +1,5 @@
 <?php 
+
 	if(!isset($_COOKIE["username"])){
 		header("Location: index.php");
 	}
@@ -16,7 +17,7 @@
 				echo $_COOKIE["username"];
 			?>
 		</span> 
-		<a class="logout" href='admin_login.php'>Log Out</a>
+		<a class="logout" name="logout" href='admin_logout.php'>Log Out</a>
 		<br>
 		<div class="navigation">
 			<ul>
